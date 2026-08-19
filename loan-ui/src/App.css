@@ -1,45 +1,216 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   LOAN PAGE
+========================= */
+
 .loan-page {
   background: #f4f7fb;
   min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.loan-container {
+
+/* =========================
+   TOP BANNER
+========================= */
+
+.top-banner {
+  background: linear-gradient(90deg, #2563eb, #1e3a8a);
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.shield-icon {
+  background: white;
+  color: #2563eb;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+
+/* =========================
+   BACKGROUND SECTION
+========================= */
+
+.background-section {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 70px 20px;
+  position: relative;
+
   display: flex;
   justify-content: center;
-  padding: 30px;
+  align-items: center;
 }
 
-.loan-form-card {
-  width: 900px;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+
+/* =========================
+   FORM WRAPPER
+========================= */
+
+.form-wrapper {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
 }
+
+
+/* =========================
+   MAIN FORM CARD
+========================= */
+
+.form-card {
+  width: 60%;
+  max-width: 900px;
+
+
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-control {
+  height: 45px;
+  width: 100%;
+  max-width: 100%;
+
+  border-radius: 8px;
+}
+
+select,
+input {
+  max-width: 100%;
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+  font-weight: 600;
+  border-left: 4px solid #2563eb;
+  padding-left: 10px;
+}
+
+.form-main-heading {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.form-subheading {
+  color: #6b7280;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+
+/* =========================
+   CARD
+========================= */
 
 .card {
   border-radius: 12px !important;
 }
 
-.form-control {
-  height: 45px;
-  border-radius: 8px;
+.card:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease;
 }
 
+
+/* =========================
+   PREDICT BUTTON
+========================= */
+
 .predict-btn {
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(90deg,#2563eb,#1e40af);
+  background: linear-gradient(90deg, #2563eb, #1e3a8a);
   color: white;
-  font-weight: 600;
+
   border: none;
-  border-radius: 10px;
+
+  height: 50px;
+  width: 100%;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+  font-size: 16px;
+
+  transition: 0.3s ease;
+
   margin-top: 20px;
 }
 
 .predict-btn:hover {
   opacity: 0.9;
+  transform: translateY(-2px);
 }
+
+
+/* =========================
+   DTI CARD
+========================= */
 
 .dti-card {
   margin-top: 20px;
@@ -51,152 +222,84 @@
 .dti-badge {
   padding: 8px 15px;
   border-radius: 20px;
+
   color: white;
   font-weight: bold;
+
   display: inline-block;
 }
 
-.green { background: #16a34a; }
-.yellow { background: #f59e0b; }
-.red { background: #dc2626; }
+.green {
+  background: #16a34a;
+}
+
+.yellow {
+  background: #f59e0b;
+}
+
+.red {
+  background: #dc2626;
+}
+
+
+/* =========================
+   RESULT PAGE
+========================= */
 
 .result-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
+  min-height: 100vh;
+
   background: #f4f7fb;
+
+  padding: 30px 20px;
 }
+
+
+/* =========================
+   RESULT CARD
+========================= */
 
 .result-card {
   backdrop-filter: blur(15px);
+
   background: rgba(255, 255, 255, 0.92);
+
   padding: 40px;
+
   border-radius: 25px;
-  width: 600px;              /* Bigger */
-  max-width: 90%;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+  width: 600px;
+  max-width: 100%;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
   text-align: center;
 }
 
-.green-bg { background: #16a34a; }
-.yellow-bg { background: #f59e0b; }
-.red-bg { background: #dc2626; }
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+.green-bg {
+  background: #16a34a;
 }
 
-.card:hover {
-  transform: translateY(-3px);
-  transition: 0.3s ease;
+.yellow-bg {
+  background: #f59e0b;
 }
 
-.section-title {
-  font-weight: 600;
-  border-left: 4px solid #2563eb;
-  padding-left: 10px;
+.red-bg {
+  background: #dc2626;
 }
 
-.loan-page {
-  font-family: 'Segoe UI', sans-serif;
-}
 
-.top-banner {
-  background: linear-gradient(90deg, #2563eb, #1e3a8a);
-  padding: 40px 0;
-  color: white;
-  text-align: center;
-}
-
-.banner-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-}
-
-.shield-icon {
-  background: white;
-  color: #2563eb;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.background-section {
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  padding: 70px 0;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.form-wrapper {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  width:100%
-}
-
-.form-card {
-  width: 60%;
-  max-width: 900px;
-  min-width: 500px;
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
-}
-
-.predict-btn {
-  background: linear-gradient(90deg, #2563eb, #1e3a8a);
-  color: white;
-  border: none;
-  height: 50px;
-  width: 100%;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: 0.3s ease;
-}
-
-.predict-btn:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-.icon-container {
-  margin-bottom: 15px;
-}
-
-.low-icon {
-  color: #16a34a;
-}
-
-.medium-icon {
-  color: #f59e0b;
-}
-
-.high-icon {
-  color: #dc2626;
-}
+/* =========================
+   RISK ICON
+========================= */
 
 .icon-container {
   margin-bottom: 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,13 +309,19 @@
 .medium-icon,
 .high-icon {
   color: white;
-  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3));
 }
+
+
+/* =========================
+   RISK BOX
+========================= */
 
 .risk-box {
   padding: 20px;
   border-radius: 12px;
   margin-top: 15px;
+
   color: white;
 }
 
@@ -227,13 +336,171 @@
   margin-top: 5px;
 }
 
-.form-main-heading {
-  font-weight: 700;
-  margin-bottom: 5px;
+
+/* ==================================================
+   TABLET
+   768px and below
+================================================== */
+
+@media (max-width: 768px) {
+
+  .top-banner {
+    padding: 30px 20px;
+  }
+
+  .banner-content {
+    gap: 12px;
+  }
+
+  .shield-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 23px;
+  }
+
+  .background-section {
+    padding: 40px 15px;
+  }
+
+  .form-card {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card {
+    width: 90%;
+    padding: 30px;
+  }
 }
 
-.form-subheading {
-  color: #6b7280;
-  margin-bottom: 20px;
-  font-size: 14px;
+
+/* ==================================================
+   MOBILE
+   480px and below
+================================================== */
+
+@media (max-width: 480px) {
+
+  .top-banner {
+    padding: 25px 15px;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .shield-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+
+  .background-section {
+    padding: 25px 10px;
+    align-items: flex-start;
+  }
+
+  .form-card {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 20px 15px;
+
+    border-radius: 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-main-heading {
+    font-size: 22px;
+  }
+
+  .form-subheading {
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .form-control {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .predict-btn {
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .dti-card {
+    padding: 12px;
+  }
+
+  .dti-badge {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+
+  .result-page {
+    padding: 20px 10px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .result-card {
+    width: 100%;
+    padding: 25px 15px;
+    border-radius: 18px;
+  }
+
+  .risk-box {
+    padding: 15px;
+  }
+
+  .risk-box h3 {
+    font-size: 23px;
+  }
+
+  .risk-box p {
+    font-size: 14px;
+  }
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+   360px and below
+================================================== */
+
+@media (max-width: 360px) {
+
+  .form-card {
+    padding: 18px 12px;
+  }
+
+  .form-main-heading {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 17px;
+  }
+
+  .predict-btn {
+    font-size: 14px;
+  }
+
+  .result-card {
+    padding: 20px 12px;
+  }
 }
